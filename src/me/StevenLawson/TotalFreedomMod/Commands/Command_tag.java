@@ -17,7 +17,7 @@ public class Command_tag extends TFM_Command
 {
     public static final List<String> FORBIDDEN_WORDS = Arrays.asList(new String[]
     {
-        "admin", "owner", "moderator", "developer", "console"
+        "admin", "owner", "moderator", "developer", "console", "mod"
     });
 
     @Override
@@ -74,7 +74,7 @@ public class Command_tag extends TFM_Command
                 else
                 {
                     TFM_PlayerData.getPlayerData(sender_p).setTag(null);
-                    playerMsg("Your tag has been removed.");
+                    playerMsg(":O you removed your tag!");
                 }
 
                 return true;
@@ -124,9 +124,9 @@ public class Command_tag extends TFM_Command
                 {
                     final String rawTag = ChatColor.stripColor(outputTag).toLowerCase();
 
-                    if (rawTag.length() > 20)
+                    if (rawTag.length() > 590)
                     {
-                        playerMsg("That tag is too long (Max is 20 characters).");
+                        playerMsg("I have no clue how you mangaged to get a tag that long!.");
                         return true;
                     }
 
@@ -134,7 +134,7 @@ public class Command_tag extends TFM_Command
                     {
                         if (rawTag.contains(word))
                         {
-                            playerMsg("That tag contains a forbidden word.");
+                            playerMsg("This tag has a bad word that is un-useable!");
                             return true;
                         }
                     }
