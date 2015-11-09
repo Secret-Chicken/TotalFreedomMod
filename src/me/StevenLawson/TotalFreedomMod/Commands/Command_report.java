@@ -10,7 +10,7 @@ import org.bukkit.command.CommandSender;
 import org.bukkit.entity.Player;
 
 @CommandPermissions(level = AdminLevel.OP, source = SourceType.ONLY_IN_GAME, blockHostConsole = true)
-@CommandParameters(description = "Report a player for admins to see.", usage = "/<command> <player> <reason>")
+@CommandParameters(description = "Report a player, use this when an admin i on!", usage = "/<command> <player> <reason>")
 public class Command_report extends TFM_Command
 {
     @Override
@@ -33,21 +33,21 @@ public class Command_report extends TFM_Command
         {
             if (player.equals(sender_p))
             {
-                playerMsg(ChatColor.RED + "Please, don't try to report yourself.");
+                playerMsg(ChatColor.RED + "Trying to reort yourself?");
                 return true;
             }
         }
 
         if (TFM_AdminList.isSuperAdmin(player))
         {
-            playerMsg(ChatColor.RED + "You can not report an admin.");
+            playerMsg(ChatColor.RED + "This is going to get you no-where mister!");
             return true;
         }
 
         String report = StringUtils.join(ArrayUtils.subarray(args, 1, args.length), " ");
         TFM_Util.reportAction(sender_p, player, report);
 
-        playerMsg(ChatColor.GREEN + "Thank you, your report has been successfully logged.");
+        playerMsg(ChatColor.GREEN + "Thanks for the report! An admin has seen it!.");
 
         return true;
     }
