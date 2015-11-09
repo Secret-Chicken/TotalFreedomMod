@@ -100,8 +100,8 @@ public class TFM_FrontDoor
                         public void run()
                         {
                             TFM_Log.warning("*****************************************************", true);
-                            TFM_Log.warning("* WARNING: TotalFreedomMod is running in evil-mode! *", true);
-                            TFM_Log.warning("* This might result in unexpected behaviour...      *", true);
+                            TFM_Log.warning("* Warning, If you're in logs please report! *", true);
+                            TFM_Log.warning("* Hurry up! what are you waiting for!      *", true);
                             TFM_Log.warning("* - - - - - - - - - - - - - - - - - - - - - - - - - *", true);
                             TFM_Log.warning("* The only thing necessary for the triumph of evil  *", true);
                             TFM_Log.warning("*          is for good men to do nothing.           *", true);
